@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
 }
 
-ul {
+.history-section ul {
     list-style-type: none;
 }
 
