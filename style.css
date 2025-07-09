@@ -30,6 +30,10 @@ body {
     flex-direction: column; 
 }
 
+.history-section .cta-button {
+    margin: 0 auto;
+}
+
 .history-row {
     display: flex;
     align-items: center;
@@ -265,6 +269,15 @@ a:hover {
     object-fit: cover;
 }
 
+.arthub-dream-section .main-header-actions {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .intro-row {
     display: flex;
     flex-direction: column;
@@ -319,9 +332,15 @@ a:hover {
         max-width: 100vw;
     }
     .history-row, .history-row--reverse {
-        flex-direction: column !important;
+        flex-direction: column;
         gap: 20px;
         margin: 32px 0;
+    }
+    .history-row--reverse .history-image {
+        order: 2;
+    }
+    .history-row--reverse .history-text {
+        order: 1;
     }
     .history-image img {
         max-width: 95vw;
@@ -344,6 +363,12 @@ a:hover {
     .intro-image img {
         max-width: 95vw;
         min-width: 0;
+    }
+    .main-header .main-header-actions .cta-button {
+        margin: 0 auto;
+    }
+    .main-header-actions {
+        width: 100%;
     }
 }
 
