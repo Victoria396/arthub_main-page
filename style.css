@@ -30,7 +30,7 @@ body {
     flex-direction: column; 
 }
 
-.history-section .cta-button {
+.arthub-dream-section .cta-button {
     margin: 0 auto;
 }
 
@@ -47,7 +47,7 @@ body {
 
 .history-text {
     flex: 1 1 0;
-    min-width: 0;
+    
     font-size: 1.08rem;
 }
 
@@ -56,7 +56,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 0;
+    
 }
 
 .history-image img {
@@ -103,7 +103,7 @@ body {
 
 .main-header-content {
     flex: 1.5;
-    min-width: 0;
+    
     z-index: 2;
 }
 
@@ -166,6 +166,7 @@ h2 {
     text-decoration: none;
     box-shadow: 0 2px 16px var(--color-shadow);
     transition: background 0.2s, transform 0.2s, box-shadow 0.3s;
+    text-wrap: nowrap;
 }
 
 .cta-button:hover {
@@ -288,7 +289,7 @@ a:hover {
 
 .intro-text {
     flex: 1 1 0;
-    min-width: 0;
+    
 }
 
 .intro-image {
@@ -296,17 +297,126 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 0;
+    
 }
 
 .intro-image img {
     width: 100%;
     max-width: 100%;
-    min-width: 0;
+    
     border-radius: var(--radius-main);
     object-fit: cover;
     box-shadow: 0 2px 16px var(--color-shadow-section);
     background: var(--color-bg-section);
+}
+
+.features-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.features-text {
+    flex: 1 1 0;
+    
+}
+
+.features-image {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.features-image img {
+    width: 100%;
+    max-width: 250px;
+    min-width: 220px;
+    border-radius: var(--radius-main);
+    object-fit: cover;
+    box-shadow: 0 2px 16px var(--color-shadow-section);
+    background: var(--color-bg-section);
+}
+
+.forwhom-images {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 32px;
+}
+
+.forwhom-images img {
+    height: 250px;
+    width: auto;
+    border-radius: var(--radius-main);
+    object-fit: cover;
+    box-shadow: 0 2px 12px var(--color-shadow-section);
+    background: var(--color-bg-section);
+    transition: transform 0.2s;
+}
+
+.why-now-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+.why-now-text {
+    flex: 2 1 0;
+    
+}
+.why-now-actions {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.why-arthub-row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.why-arthub-images {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.why-arthub-image {
+    max-width: 420px;
+    width: 100%;
+    margin: 0;
+    border-radius: var(--radius-main);
+    box-shadow: 0 2px 16px var(--color-shadow-section);
+    object-fit: cover;
+    background: var(--color-bg-section);
+}
+
+.crowdfunding-image {
+    display: block;
+    margin: 32px auto 0 auto;
+    max-width: 560px;
+    width: 100%;
+    border-radius: var(--radius-main);
+    box-shadow: 0 2px 16px var(--color-shadow-section);
+    object-fit: cover;
+    background: var(--color-bg-section);
+}
+
+.crowdfunding-section .crowdfunding-link {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.crowdfunding-section a {
+    color: var(--color-text-main);
 }
 
 @media (max-width: 900px) {
@@ -322,19 +432,23 @@ a:hover {
     }
     .main-header-image-wrapper {
         width: 100%;
-        height: 220px;
+        height: auto;
         justify-content: center;
-        margin-bottom: 0;
+        margin-bottom: 30px;
     }
     .main-header-image {
-        height: 320px;
+        height: 54vh;
         width: auto;
         max-width: 100vw;
     }
+    .history-heading {
+        flex-direction: column;
+        align-items: flex-start; 
+    }
     .history-row, .history-row--reverse {
         flex-direction: column;
-        gap: 20px;
-        margin: 32px 0;
+        gap: 10px;
+        margin: 20px 0;
     }
     .history-row--reverse .history-image {
         order: 2;
@@ -343,8 +457,8 @@ a:hover {
         order: 1;
     }
     .history-image img {
-        max-width: 95vw;
-        min-width: 0;
+        max-width: 45vw;
+        
     }
     .arthub-dream-images {
         flex-direction: column;
@@ -352,8 +466,13 @@ a:hover {
         align-items: center;
     }
     .arthub-dream-images img {
-        width: 95vw;
-        max-width: 95vw;
+        width: 100%;
+        max-width: 440px;
+        height: auto;
+    }
+
+    .arthub-dream-images img:last-of-type {
+        display: none;
     }
     .intro-row {
         flex-direction: column;
@@ -362,7 +481,7 @@ a:hover {
     }
     .intro-image img {
         max-width: 95vw;
-        min-width: 0;
+        
     }
     .main-header .main-header-actions .cta-button {
         margin: 0 auto;
@@ -370,36 +489,49 @@ a:hover {
     .main-header-actions {
         width: 100%;
     }
+    .features-row {
+        flex-direction: column;
+        gap: 20px;
+        margin: 24px 0;
+    }
+    .features-image {
+        width: 100%;
+    }
+    .features-image img {
+        max-width: 275px;
+        
+    }
+    .forwhom-images img:first-of-type {
+        display: none;
+    }
+    .why-now-row {
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+    }
+    .why-now-actions {
+        align-items: center;
+        margin-top: 24px;
+        width: 100%;
+    }
+    .why-now-actions .cta-button {
+        margin: 0 auto;
+    }
+    .why-arthub-row {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .why-arthub-images {
+        flex-direction: row;
+        gap: 12px;
+        width: 100%;
+        justify-content: center;
+    }
+    .why-arthub-image {
+        max-width: 35vw;
+    }
 }
 
 @media (max-width: 600px) {
-    .main-header {
-        min-height: 40vh;
-        padding: 32px 0 16px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    h1 {
-        font-size: 1.5rem;
-    }
-    h2 {
-        font-size: 1.1rem;
-    }
-    main {
-        padding: 16px 4px 32px 4px;
-    }
-    section {
-        padding: 18px 8px;
-        border-radius: var(--radius-small);
-    }
-    .history-heading {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-    }
-    .history-portrait {
-        margin-bottom: 0;
-    }
+
 }
