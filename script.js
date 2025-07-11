@@ -18,3 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
   moveElementsIfMobile();
   window.addEventListener('resize', moveElementsIfMobile);
 });
+
+window.addEventListener('load', function() {
+  var preloader = document.getElementById('preloader');
+  if (preloader) {
+    preloader.style.opacity = '0';
+    setTimeout(function() {
+      preloader.style.display = 'none';
+    }, 400);
+  }
+});
